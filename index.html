@@ -72,6 +72,9 @@
     .work-card{border:1px solid var(--border);border-radius:18px;overflow:hidden;background:#0f111e;transition:.2s}
     .work-card:hover{box-shadow:0 0 25px rgba(255,0,255,.2)}
     .work-card img{aspect-ratio:16/9;object-fit:cover;opacity:.95}
+    /* Inline illustration placeholder for reliability */
+    .work-illus{aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,rgba(255,0,255,.08),rgba(0,229,255,.08));border-bottom:1px solid var(--border)}
+    .work-illus svg{width:60%;height:60%;opacity:.95}
     .work-body{padding:20px}
     .tag{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(139,92,246,.18);color:#c7bfff;border:1px solid rgba(139,92,246,.35);font-size:12px}
 
@@ -218,7 +221,30 @@
             </div>
           </article>
           <article class="work-card">
-            <img src="https://images.unsplash.com/photo-1581091215367-59ab6c52d1d5?q=80&w=1600&auto=format&fit=crop" alt="Playbooks and macros" />
+            <div class="work-illus" aria-label="Playbooks and macros illustration">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img">
+                <defs>
+                  <linearGradient id="g1" x1="0" x2="1">
+                    <stop offset="0%" stop-color="#ff00ff"/>
+                    <stop offset="100%" stop-color="#00e5ff"/>
+                  </linearGradient>
+                </defs>
+                <!-- Folder -->
+                <rect x="22" y="46" width="120" height="90" rx="10" fill="#0f111e" stroke="#26324a"/>
+                <rect x="22" y="46" width="120" height="18" rx="10" fill="#121b2a"/>
+                <!-- Pages -->
+                <rect x="38" y="70" width="88" height="56" rx="6" fill="#0b1322" stroke="#2a3854"/>
+                <rect x="46" y="80" width="72" height="6" rx="3" fill="url(#g1)"/>
+                <rect x="46" y="92" width="52" height="6" rx="3" fill="#2f3c59"/>
+                <rect x="46" y="104" width="62" height="6" rx="3" fill="#2f3c59"/>
+                <!-- Macro bolt icon -->
+                <circle cx="150" cy="120" r="28" fill="#101a2a" stroke="#2a3854"/>
+                <path d="M150 96 l8 14 h-10 l10 14 h-24 l8 -12 h-10 z" fill="url(#g1)"/>
+                <!-- Check mark -->
+                <circle cx="150" cy="70" r="16" fill="#101a2a" stroke="#2a3854"/>
+                <path d="M142 70 l6 6 l10 -12" fill="none" stroke="#00ff9d" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
             <div class="work-body">
               <span class="tag">Guides</span>
               <h3 style="margin:10px 0 6px">Playbooks and macros</h3>
