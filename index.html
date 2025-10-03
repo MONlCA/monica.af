@@ -3,272 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>monica.af — Technical Support Engineer</title>
-  <meta name="description" content="Monica — Technical Support Engineer. A2P 10DLC and Toll‑Free compliance, onboarding, fraud and remediation tooling." />
+  <title>monica.af — Portfolio & Services</title>
+  <meta name="description" content="Monica — Technical Support Engineer & Web Designer. A2P 10DLC and Toll‑Free compliance, remediation tooling, and custom websites." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* ===== Full Gameplex neon arcade style ===== */
     :root{
-      --bg:#0b0d16;
-      --panel:#121425;
-      --border:#1d2133;
-      --text:#f1f5f9;
-      --muted:#94a3b8;
-      --accent1:#ff00ff;
-      --accent2:#00e5ff;
-      --accent3:#00ff9d;
+      --bg:#0b0d16; --panel:#121425; --border:#1d2133; --text:#f1f5f9; --muted:#94a3b8;
+      --accent1:#ff00ff; --accent2:#00e5ff; --accent3:#00ff9d;
       --glow-pink:0 0 20px rgba(255,0,255,.6);
       --glow-cyan:0 0 20px rgba(0,229,255,.6);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;height:100%;scroll-behavior:smooth;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-    h1,h2,h3{font-family:Orbitron,Inter,sans-serif}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui}
+    h1,h2,h3{font-family:Orbitron,sans-serif}
     a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
     .container{max-width:1280px;margin:0 auto;padding:0 24px}
-
-    /* Header */
     header{position:sticky;top:0;z-index:50;background:rgba(11,13,22,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px;text-transform:uppercase;color:var(--accent2)}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--accent2)}
     .brand-mark{width:40px;height:40px;border-radius:8px;display:grid;place-items:center;font-weight:900;color:#0b0d16;background:linear-gradient(135deg,var(--accent1),var(--accent2));box-shadow:var(--glow-pink)}
     .nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
-    .nav a{color:var(--muted);font-weight:600;transition:.2s}
+    .nav a{color:var(--muted);font-weight:600}
     .nav a:hover{color:var(--accent2);text-shadow:var(--glow-cyan)}
-    .mobile-toggle{display:none}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:12px;font-weight:700;letter-spacing:.2px;cursor:pointer;transition:.2s}
+    .btn{padding:12px 20px;border-radius:12px;font-weight:700;cursor:pointer}
     .btn.primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#0b0d16;box-shadow:var(--glow-pink)}
-    .btn.ghost{border:1px solid var(--border);background:#0f111e}
-
-    /* Hero */
-    .hero{position:relative;overflow:hidden;isolation:isolate}
-    .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 400px at 15% -5%,rgba(255,0,255,.15),transparent 70%),radial-gradient(900px 400px at 85% -5%,rgba(0,229,255,.18),transparent 70%);z-index:-1}
-    .hero-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:100px 0}
-    .eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.15em;color:var(--accent3);margin-bottom:20px}
-    h1{font-size:72px;line-height:1.05;margin:0 0 18px;text-shadow:0 0 18px rgba(0,229,255,.5)}
-    .lead{color:var(--muted);font-size:20px;line-height:1.8;margin:0 0 32px}
-    .stats{display:flex;gap:20px;flex-wrap:wrap;margin-top:22px}
-    .stat{background:#0f111e;border:1px solid var(--border);border-radius:14px;padding:16px 20px;min-width:160px;text-align:center;box-shadow:0 0 20px rgba(255,0,255,.12)}
-    .stat strong{font-size:24px;color:var(--accent2);display:block}
-
-    /* Section shells */
     section{padding:90px 0}
     .section-alt{background:#10121e;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
     .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:28px}
-    h2{font-size:36px;margin:0;text-transform:uppercase;color:var(--accent1)}
-    .under{height:4px;width:70px;background:linear-gradient(90deg,var(--accent1),var(--accent2));border-radius:4px;margin-top:12px;box-shadow:var(--glow-pink)}
+    h2{font-size:36px;margin:0;color:var(--accent1)}
     .sub{color:var(--muted)}
-
-    /* Services */
     .grid{display:grid;gap:26px}
-    .service{background:#0f111e;border:1px solid var(--border);border-radius:18px;padding:26px;transition:.2s}
-    .service:hover{box-shadow:0 0 20px rgba(0,229,255,.2)}
-    .service h3{margin:0 0 10px;font-size:20px;color:var(--accent3)}
-    .service p{margin:0;color:var(--muted)}
-
-    /* Work */
-    .work-card{border:1px solid var(--border);border-radius:18px;overflow:hidden;background:#0f111e;transition:.2s}
-    .work-card:hover{box-shadow:0 0 25px rgba(255,0,255,.2)}
-    .work-card img{aspect-ratio:16/9;object-fit:cover;opacity:.95}
-    /* Inline illustration placeholder for reliability */
-    .work-illus{aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,rgba(255,0,255,.08),rgba(0,229,255,.08));border-bottom:1px solid var(--border)}
-    .work-illus svg{width:60%;height:60%;opacity:.95}
-    .work-body{padding:20px}
-    .tag{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(139,92,246,.18);color:#c7bfff;border:1px solid rgba(139,92,246,.35);font-size:12px}
-
-    /* Marquee */
-    .marquee{display:flex;overflow:hidden;gap:50px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:#0b0d16}
-    .marquee-track{display:flex;gap:50px;animation:scroll 30s linear infinite;padding:18px 0;min-width:200%}
-    @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-    .pill.small{padding:8px 14px;font-size:13px;color:#cbd5e1;border:1px solid #273149;border-radius:999px;background:#0f111e}
-
-    /* Contact */
-    .contact{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-    .panel{background:#0f111e;border:1px solid var(--border);border-radius:18px;padding:26px;box-shadow:0 0 20px rgba(0,229,255,.12)}
-
-    footer{padding:40px 0;color:var(--muted);border-top:1px solid var(--border);background:#0b0d16;text-align:center;font-size:14px}
-
-    /* Responsive */
-    @media (max-width: 1000px){
-      .hero-wrap{grid-template-columns:1fr}
-      h1{font-size:48px}
-      .nav ul{display:none}
-      .mobile-toggle{display:inline-flex}
-      .contact{grid-template-columns:1fr}
-    }
+    .service,.panel,.cta-panel{background:#0f111e;border:1px solid var(--border);border-radius:18px;padding:26px}
+    .cta-panel{text-align:center;padding:60px 30px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#0b0d16;box-shadow:var(--glow-pink)}
+    .cta-panel h2{color:#0b0d16;margin-bottom:20px}
+    ul.checklist{list-style:none;padding:0;margin:0}
+    ul.checklist li{margin:8px 0;padding-left:20px;position:relative;color:var(--muted)}
+    ul.checklist li::before{content:"✔";position:absolute;left:0;color:var(--accent3)}
+    footer{padding:40px 0;text-align:center;color:var(--muted);border-top:1px solid var(--border)}
   </style>
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <a href="#top" class="brand">
-        <span class="brand-mark">MP</span>
-        <span>monica.af</span>
-      </a>
-      <nav>
-        <button class="btn ghost mobile-toggle" aria-label="Menu" onclick="document.querySelector('.nav ul').style.display = (document.querySelector('.nav ul').style.display==='flex'?'none':'flex')">☰</button>
-        <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a class="btn primary" href="mailto:m.pras@mail.com">Get in touch</a></li>
-        </ul>
-      </nav>
+<header>
+  <div class="container nav">
+    <a href="#top" class="brand"><span class="brand-mark">MP</span><span>monica.af</span></a>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#why">Why Work With Me</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn primary" href="mailto:m.pras@mail.com">Get in touch</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Hi, I’m Monica.</h1>
+      <p class="sub">Technical Support Engineer & Web Designer. I merge compliance know‑how with creative design to help businesses stay approved and stand out online.</p>
+      <a class="btn primary" href="#services">Explore Services</a>
     </div>
-  </header>
+  </section>
 
-  <main id="top">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-wrap">
-        <div>
-          <span class="eyebrow">TECH • A2P 10DLC • TOLL‑FREE • REMEDIATION</span>
-          <h1>Compliance that ships. Remediation that sticks.</h1>
-          <p class="lead">I help teams pass A2P 10DLC and Toll‑Free reviews, fix rejections fast, and harden accounts against abuse. You’ll get the exact edits to make and proof it’s compliant.</p>
-          <div style="display:flex; gap:14px; flex-wrap:wrap">
-            <a class="btn primary" href="#contact">Start a project</a>
-            <a class="btn ghost" href="#work">See recent work</a>
-          </div>
-          <div class="stats">
-            <div class="stat"><strong>200+ </strong><div class="sub">campaign reviews</div></div>
-            <div class="stat"><strong>90%+ </strong><div class="sub">first re‑submit pass</div></div>
-            <div class="stat"><strong>4 </strong><div class="sub">internal tools shipped</div></div>
-          </div>
+  <!-- Services -->
+  <section id="services" class="section-alt">
+    <div class="container">
+      <div class="section-head"><h2>Services</h2></div>
+      <div class="grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="service">
+          <h3>✅ A2P & Compliance</h3>
+          <p>Opt‑in reviews, policy audits, and resubmission strategies for A2P 10DLC and Toll‑Free campaigns.</p>
         </div>
-        <div class="panel">
-          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1600&auto=format&fit=crop" alt="System security illustration" />
+        <div class="service">
+          <h3>🎨 Web Design</h3>
+          <p>Custom landing pages, portfolios, and small business websites with a modern, responsive look.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- Marquee -->
-    <div class="marquee">
-      <div class="marquee-track">
-        <span class="pill small">A2P 10DLC approvals</span>
-        <span class="pill small">Toll‑Free verification</span>
-        <span class="pill small">Opt‑in & policy audits</span>
-        <span class="pill small">ATO sanitation checks</span>
-        <span class="pill small">API key rotation</span>
-        <span class="pill small">MFA & access hardening</span>
-        <span class="pill small">Playbooks & macros</span>
-        <span class="pill small">False‑positive reduction</span>
-        <span class="pill small">A2P 10DLC approvals</span>
-        <span class="pill small">Toll‑Free verification</span>
-        <span class="pill small">Opt‑in & policy audits</span>
-        <span class="pill small">ATO sanitation checks</span>
-        <span class="pill small">API key rotation</span>
-        <span class="pill small">MFA & access hardening</span>
-        <span class="pill small">Playbooks & macros</span>
-        <span class="pill small">False‑positive reduction</span>
+        <div class="service">
+          <h3>🛍️ E‑Commerce Basics</h3>
+          <p>Simple online stores with product pages, checkout integrations, and responsive design for small shops.</p>
+        </div>
+        <div class="service">
+          <h3>✨ Branding Packages</h3>
+          <p>Logos, color palettes, and style guides to give your business a consistent and professional identity.</p>
+        </div>
+        <div class="service">
+          <h3>🛡️ Remediation & Security</h3>
+          <p>ATO cleanup, key rotation, MFA setup, and runbook-driven security hardening.</p>
+        </div>
+        <div class="service">
+          <h3>📱 Portfolio Sites</h3>
+          <p>Personal portfolio websites to showcase projects, skills, and services with a polished, mobile‑first layout.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Services -->
-    <section id="services" class="section-alt">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Services</h2>
-            <div class="under"></div>
-          </div>
-          <p class="sub">Clear scope. Practical deliverables. Approval‑ready results.</p>
-        </div>
-        <div class="grid" style="grid-template-columns:repeat(3,1fr)">
-          <div class="service">
-            <h3>✅ A2P 10DLC approvals</h3>
-            <p>Opt‑in and policy reviews, language fixes, brand alignment, and resubmission strategy to cut review cycles.</p>
-          </div>
-          <div class="service">
-            <h3>📲 Toll‑Free verification</h3>
-            <p>Use‑case guidance, evidence prep, and remediation for common rejection reasons like unclear consent or vague policies.</p>
-          </div>
-          <div class="service">
-            <h3>🛡️ Post‑incident remediation</h3>
-            <p>ATO sanitation checks, key rotation, MFA, traffic validation, and runbook‑driven reactivation steps.</p>
-          </div>
-        </div>
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head"><h2>About</h2></div>
+      <p class="sub">I’m Monica Prasad, a Technical Support Engineer and creative builder. My work spans two worlds: compliance and design. In compliance, I guide teams through A2P and Toll‑Free approvals, write playbooks, and create internal tools that cut down review cycles. In design, I craft modern, functional websites for creatives, entrepreneurs, and small businesses. Whether it’s clearing a campaign rejection or launching a new brand online, I focus on clarity, usability, and results.</p>
+    </div>
+  </section>
+
+  <!-- Why Work With Me -->
+  <section id="why" class="section-alt">
+    <div class="container">
+      <div class="section-head"><h2>Why Work With Me</h2></div>
+      <ul class="checklist">
+        <li>Clear communication — no jargon, just direct guidance.</li>
+        <li>Fast turnarounds — I respect your timelines and deliver on schedule.</li>
+        <li>Practical solutions — everything I provide is actionable, not theoretical.</li>
+        <li>Balanced skillset — compliance precision meets creative design.</li>
+        <li>Client-first approach — I focus on making your project succeed, end to end.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-panel">
+        <h2>Let’s build something together</h2>
+        <p>Whether you need compliance clarity or a bold new website, I’m here to help you move forward.</p>
+        <a class="btn primary" href="mailto:m.pras@mail.com">Get in touch</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Work -->
-    <section id="work">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Selected work</h2>
-            <div class="under"></div>
-          </div>
-          <p class="sub">Internal tools and playbooks used in real queues.</p>
-        </div>
-        <div class="grid" style="grid-template-columns:repeat(3,1fr)">
-          <article class="work-card">
-            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1600&auto=format&fit=crop" alt="Dashboard" />
-            <div class="work-body">
-              <span class="tag">A2PComplianceApp</span>
-              <h3 style="margin:10px 0 6px">Opt‑in & Privacy Checker</h3>
-              <p class="sub" style="margin:0">Screenshot + URL analysis to flag missing consent language and policy gaps with exact fixes.</p>
-            </div>
-          </article>
-          <article class="work-card">
-            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1600&auto=format&fit=crop" alt="Security UI" />
-            <div class="work-body">
-              <span class="tag">ATO Sanitation</span>
-              <h3 style="margin:10px 0 6px">Remediation Checker</h3>
-              <p class="sub" style="margin:0">Runbook‑aligned checklist that verifies MFA, key rotation, and risky asset cleanup.</p>
-            </div>
-          </article>
-          <article class="work-card">
-            <div class="work-illus" aria-label="Playbooks and macros illustration">
-              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img">
-                <defs>
-                  <linearGradient id="g1" x1="0" x2="1">
-                    <stop offset="0%" stop-color="#ff00ff"/>
-                    <stop offset="100%" stop-color="#00e5ff"/>
-                  </linearGradient>
-                </defs>
-                <!-- Folder -->
-                <rect x="22" y="46" width="120" height="90" rx="10" fill="#0f111e" stroke="#26324a"/>
-                <rect x="22" y="46" width="120" height="18" rx="10" fill="#121b2a"/>
-                <!-- Pages -->
-                <rect x="38" y="70" width="88" height="56" rx="6" fill="#0b1322" stroke="#2a3854"/>
-                <rect x="46" y="80" width="72" height="6" rx="3" fill="url(#g1)"/>
-                <rect x="46" y="92" width="52" height="6" rx="3" fill="#2f3c59"/>
-                <rect x="46" y="104" width="62" height="6" rx="3" fill="#2f3c59"/>
-                <!-- Macro bolt icon -->
-                <circle cx="150" cy="120" r="28" fill="#101a2a" stroke="#2a3854"/>
-                <path d="M150 96 l8 14 h-10 l10 14 h-24 l8 -12 h-10 z" fill="url(#g1)"/>
-                <!-- Check mark -->
-                <circle cx="150" cy="70" r="16" fill="#101a2a" stroke="#2a3854"/>
-                <path d="M142 70 l6 6 l10 -12" fill="none" stroke="#00ff9d" stroke-width="4" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="work-body">
-              <span class="tag">Guides</span>
-              <h3 style="margin:10px 0 6px">Playbooks and macros</h3>
-              <p class="sub" style="margin:0">Plain‑English templates your team can drop into replies and reviews.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+  <!-- Privacy Policy -->
+  <section id="privacy">
+    <div class="container">
+      <div class="section-head"><h2>Privacy Policy</h2></div>
+      <p class="sub">Your privacy is important. I only collect personal information you voluntarily share (such as through email). I do not sell or share your data. Third‑party services used on this site (like GitHub Pages hosting) may collect technical information such as IP addresses or browser type. If you contact me, your email will only be used to respond to your inquiry.</p>
+    </div>
+  </section>
+</main>
 
-    <!-- About -->
-    <section id="about" class="section-alt">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>About</h2>
-            <div class="under"></div>
-          </div>
-          <p class="sub">Focused on messaging compliance, onboarding and fraud‑aware remediation.</p>
-        </div>
-        <div class="grid" style="grid-template-columns:1.2fr .8fr">
-          <p class="sub">I build tools that reduce rework and turn policy into clear steps anyone can follow. My goal: fewer back‑and‑forths, faster approvals, durable fixes.</p>
-          <div class="panel">
-            <ul style="margin:0;padding-left:18px;color:var(--muted);line-height:1.8">
-              <li>A2P 10DLC approvals and Toll‑Free verification</li>
-              <li>Opt‑in and privacy policy audits</li>
-              <li>ATO cleanup and
+<footer>
+  <div class="container">© 2025 Monica Prasad — monica.af</div>
+</footer>
+</body>
+</html>
