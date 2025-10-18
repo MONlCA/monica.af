@@ -11,4 +11,4 @@ How to deploy to GitHub Pages (monica.af)
    - Custom domain: monica.af
    - Enforce HTTPS: checked
 
-That's it!
+Cache tip: use a hard refresh or incognito if you don't see changes immediately.

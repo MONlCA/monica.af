@@ -4,151 +4,218 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>monica.af — Portfolio & Services</title>
-  <meta name="description" content="Monica — Technical Support Engineer & Web Designer. A2P 10DLC and Toll‑Free compliance, remediation tooling, and custom websites." />
+  <meta name="description" content="Monica — Technical Support Engineer & Web Designer. A2P 10DLC and Toll-Free compliance, remediation tooling, and custom websites." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0b0d16; --panel:#121425; --border:#1d2133; --text:#f1f5f9; --muted:#94a3b8;
-      --accent1:#ff00ff; --accent2:#00e5ff; --accent3:#00ff9d;
-      --glow-pink:0 0 20px rgba(255,0,255,.6);
-      --glow-cyan:0 0 20px rgba(0,229,255,.6);
+      --bg:#0a0a0b;
+      --panel:#141416;
+      --text:#ffffff;
+      --muted:#b9bcc1;
+      --border:#212126;
+      --accent:#00e5ff;
+      --accent2:#ff5cf0;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui}
-    h1,h2,h3{font-family:Orbitron,sans-serif}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1280px;margin:0 auto;padding:0 24px}
-    header{position:sticky;top:0;z-index:50;background:rgba(11,13,22,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-    .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--accent2)}
-    .brand-mark{width:40px;height:40px;border-radius:8px;display:grid;place-items:center;font-weight:900;color:#0b0d16;background:linear-gradient(135deg,var(--accent1),var(--accent2));box-shadow:var(--glow-pink)}
-    .nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
-    .nav a{color:var(--muted);font-weight:600}
-    .nav a:hover{color:var(--accent2);text-shadow:var(--glow-cyan)}
-    .btn{padding:12px 20px;border-radius:12px;font-weight:700;cursor:pointer}
-    .btn.primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#0b0d16;box-shadow:var(--glow-pink)}
-    section{padding:90px 0}
-    .section-alt{background:#10121e;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-    .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:28px}
-    h2{font-size:36px;margin:0;color:var(--accent1)}
-    .sub{color:var(--muted)}
-    .grid{display:grid;gap:26px}
-    .service,.panel,.cta-panel{background:#0f111e;border:1px solid var(--border);border-radius:18px;padding:26px}
-    .cta-panel{text-align:center;padding:60px 30px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#0b0d16;box-shadow:var(--glow-pink)}
-    .cta-panel h2{color:#0b0d16;margin-bottom:20px}
-    ul.checklist{list-style:none;padding:0;margin:0}
-    ul.checklist li{margin:8px 0;padding-left:20px;position:relative;color:var(--muted)}
-    ul.checklist li::before{content:"✔";position:absolute;left:0;color:var(--accent3)}
-    footer{padding:40px 0;text-align:center;color:var(--muted);border-top:1px solid var(--border)}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;line-height:1.7}
+    a{color:#fff;text-decoration:none}
+    a:hover{color:var(--accent)}
+    img{max-width:100%;display:block}
+    .container{max-width:1180px;margin:0 auto;padding:0 24px}
+    header{position:sticky;top:0;z-index:30;background:rgba(10,10,11,.75);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand .logo{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0b0c0f;font-weight:900}
+    .brand span{font-family:'Playfair Display',serif;font-size:28px;font-weight:700}
+    .nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;font-family:'Inter',sans-serif;font-size:15px}
+    h1,h2,h3{font-family:'Playfair Display',serif;color:#fff;line-height:1.2;margin-top:0}
+    h1{font-size:52px;margin-bottom:16px}
+    h2{font-size:32px;margin-bottom:16px}
+    h3{font-size:20px;margin-bottom:8px}
+    .sub{color:var(--muted);font-size:16px;margin-bottom:20px}
+    .hero{position:relative;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;min-height:72vh}
+    .hero .media{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--border)}
+    .hero .media::before{content:"";position:absolute;inset:0;background:radial-gradient(100% 100% at 0% 0%,rgba(0,229,255,.2),transparent 50%),radial-gradient(100% 100% at 100% 0%,rgba(255,92,240,.15),transparent 55%)}
+    .hero img{height:100%;width:100%;object-fit:cover;filter:saturate(105%) contrast(102%)}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:800;letter-spacing:.12em;font-size:12px;color:var(--accent);text-transform:uppercase}
+    .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--accent2)}
+    .pill-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--panel);border-radius:999px;padding:6px 12px;color:#fff}
+    section{padding:64px 0;border-top:1px solid var(--border)}
+    .grid{display:grid;gap:22px}
+    .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:18px;transition:.18s transform,.18s box-shadow}
+    .card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.35)}
+    .service{display:flex;gap:12px;align-items:flex-start}
+    .service .emoji{font-size:20px;filter:drop-shadow(0 0 8px rgba(0,229,255,.25))}
+    .work-grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+    .work-card{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--panel)}
+    .work-card img{aspect-ratio:16/9;object-fit:cover}
+    .tag{display:inline-block;margin-top:8px;padding:4px 10px;border-radius:999px;background:#0e1115;color:#b8fffb;border:1px solid #16414a;font-size:12px}
+    .marquee{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:#0b0c10}
+    .marquee-track{display:flex;gap:28px;min-width:200%;padding:14px 0;animation:scroll 35s linear infinite}
+    .chip{border:1px solid var(--border);background:#0e0f13;border-radius:999px;padding:6px 12px;color:#dbe1e7;font-size:14px}
+    @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    .cta-panel{text-align:center;border:1px solid var(--border);padding:40px 20px;background:linear-gradient(180deg,#121216,#0d0d10);border-radius:12px}
+    .btn{display:inline-block;margin-top:14px;padding:12px 18px;background:var(--accent);color:#001218;font-weight:700;border-radius:10px}
+    .btn:hover{opacity:.95}
+    footer{padding:30px 0;border-top:1px solid var(--border);text-align:center;color:#babec4;font-size:14px}
+    @media (max-width:880px){
+      h1{font-size:38px}
+      .hero .wrap{grid-template-columns:1fr}
+    }
   </style>
 </head>
 <body>
 <header>
   <div class="container nav">
-    <a href="#top" class="brand"><span class="brand-mark">MP</span><span>monica.af</span></a>
+    <a class="brand" href="#top">
+      <div class="logo">✨</div>
+      <span>monica.af</span>
+    </a>
     <nav>
       <ul>
         <li><a href="#services">Services</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#why">Why Work With Me</a></li>
+        <li><a href="#why">Why</a></li>
         <li><a href="#privacy">Privacy</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a class="btn primary" href="mailto:m.pras@mail.com">Get in touch</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main id="top">
-  <!-- Hero -->
   <section class="hero">
-    <div class="container">
-      <h1>Hi, I’m Monica.</h1>
-      <p class="sub">Technical Support Engineer & Web Designer. I merge compliance know‑how with creative design to help businesses stay approved and stand out online.</p>
-      <a class="btn primary" href="#services">Explore Services</a>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="section-alt">
-    <div class="container">
-      <div class="section-head"><h2>Services</h2></div>
-      <div class="grid" style="grid-template-columns:repeat(3,1fr)">
-        <div class="service">
-          <h3>✅ A2P & Compliance</h3>
-          <p>Opt‑in reviews, policy audits, and resubmission strategies for A2P 10DLC and Toll‑Free campaigns.</p>
+    <div class="container wrap">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> TECH • COMPLIANCE • DESIGN</div>
+        <h1>Compliance clarity, websites that slap ⚡️</h1>
+        <p class="sub">I help teams pass A2P 10DLC and Toll‑Free reviews, fix rejections fast, and launch clean, fast sites. Straight talk, practical deliverables.</p>
+        <div class="pill-row">
+          <span class="pill">📲 A2P 10DLC</span>
+          <span class="pill">🧾 Privacy & opt‑in</span>
+          <span class="pill">🛡️ Remediation</span>
+          <span class="pill">🎨 Web design</span>
+          <span class="pill">🛍️ E‑commerce</span>
         </div>
-        <div class="service">
-          <h3>🎨 Web Design</h3>
-          <p>Custom landing pages, portfolios, and small business websites with a modern, responsive look.</p>
-        </div>
-        <div class="service">
-          <h3>🛍️ E‑Commerce Basics</h3>
-          <p>Simple online stores with product pages, checkout integrations, and responsive design for small shops.</p>
-        </div>
-        <div class="service">
-          <h3>✨ Branding Packages</h3>
-          <p>Logos, color palettes, and style guides to give your business a consistent and professional identity.</p>
-        </div>
-        <div class="service">
-          <h3>🛡️ Remediation & Security</h3>
-          <p>ATO cleanup, key rotation, MFA setup, and runbook-driven security hardening.</p>
-        </div>
-        <div class="service">
-          <h3>📱 Portfolio Sites</h3>
-          <p>Personal portfolio websites to showcase projects, skills, and services with a polished, mobile‑first layout.</p>
-        </div>
+        <p><a class="btn" href="mailto:m.pras@mail.com">Let’s build it →</a></p>
+      </div>
+      <div class="media">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1800&auto=format&fit=crop" alt="Hero workspace"/>
       </div>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about">
+  <div class="marquee">
+    <div class="marquee-track container">
+      <span class="chip">✅ Approvals</span>
+      <span class="chip">🔐 MFA & key rotation</span>
+      <span class="chip">📊 Runbooks</span>
+      <span class="chip">🧰 Tooling</span>
+      <span class="chip">⚡ Fast turnarounds</span>
+      <span class="chip">🧠 Clear guidance</span>
+      <span class="chip">🎯 Results</span>
+      <span class="chip">✅ Approvals</span>
+      <span class="chip">🔐 MFA & key rotation</span>
+      <span class="chip">📊 Runbooks</span>
+      <span class="chip">🧰 Tooling</span>
+      <span class="chip">⚡ Fast turnarounds</span>
+      <span class="chip">🧠 Clear guidance</span>
+      <span class="chip">🎯 Results</span>
+    </div>
+  </div>
+
+  <section id="services">
     <div class="container">
-      <div class="section-head"><h2>About</h2></div>
-      <p class="sub">I’m Monica Prasad, a Technical Support Engineer and creative builder. My work spans two worlds: compliance and design. In compliance, I guide teams through A2P and Toll‑Free approvals, write playbooks, and create internal tools that cut down review cycles. In design, I craft modern, functional websites for creatives, entrepreneurs, and small businesses. Whether it’s clearing a campaign rejection or launching a new brand online, I focus on clarity, usability, and results.</p>
+      <h2>Services 🛠️</h2>
+      <p class="sub">Focused packages with concrete outcomes.</p>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div class="card service"><div class="emoji">✅</div><div><h3>A2P & Compliance</h3><p class="sub">Opt‑in reviews, policy audits, and resubmission strategy for A2P 10DLC & Toll‑Free.</p></div></div>
+        <div class="card service"><div class="emoji">🎨</div><div><h3>Web Design</h3><p class="sub">Landing pages and portfolios with crisp type and smooth performance.</p></div></div>
+        <div class="card service"><div class="emoji">🛍️</div><div><h3>E‑Commerce Basics</h3><p class="sub">Starter shops with product pages, checkout integrations, and mobile‑first UX.</p></div></div>
+        <div class="card service"><div class="emoji">🛡️</div><div><h3>Remediation & Security</h3><p class="sub">ATO cleanup, key rotation, MFA, and runbook‑driven hardening.</p></div></div>
+        <div class="card service"><div class="emoji">✨</div><div><h3>Branding Packages</h3><p class="sub">Logos, color systems, and lightweight style guides to keep things consistent.</p></div></div>
+        <div class="card service"><div class="emoji">📱</div><div><h3>Portfolio Sites</h3><p class="sub">Showcase your work with a clean, fast, scroll‑friendly layout.</p></div></div>
+      </div>
     </div>
   </section>
 
-  <!-- Why Work With Me -->
-  <section id="why" class="section-alt">
+  <section id="work">
     <div class="container">
-      <div class="section-head"><h2>Why Work With Me</h2></div>
-      <ul class="checklist">
-        <li>Clear communication — no jargon, just direct guidance.</li>
-        <li>Fast turnarounds — I respect your timelines and deliver on schedule.</li>
-        <li>Practical solutions — everything I provide is actionable, not theoretical.</li>
-        <li>Balanced skillset — compliance precision meets creative design.</li>
-        <li>Client-first approach — I focus on making your project succeed, end to end.</li>
+      <h2>Selected Work 📸</h2>
+      <div class="work-grid">
+        <article class="work-card">
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1600&auto=format&fit=crop" alt="Dashboard" />
+          <div style="padding:14px">
+            <span class="tag">A2P</span>
+            <h3 style="margin:8px 0 4px">Opt‑in & Privacy Checker</h3>
+            <p class="sub" style="margin:0">Automated review hints for faster approvals.</p>
+          </div>
+        </article>
+        <article class="work-card">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1600&auto=format&fit=crop" alt="Security UI" />
+          <div style="padding:14px">
+            <span class="tag">Security</span>
+            <h3 style="margin:8px 0 4px">Remediation Checklist</h3>
+            <p class="sub" style="margin:0">Runbook‑aligned verification for MFA and key rotation.</p>
+          </div>
+        </article>
+        <article class="work-card">
+          <img src="https://images.unsplash.com/photo-1581091215367-59ab6c52d1d5?q=80&w=1600&auto=format&fit=crop" alt="Docs" />
+          <div style="padding:14px">
+            <span class="tag">Guides</span>
+            <h3 style="margin:8px 0 4px">Playbooks & Macros</h3>
+            <p class="sub" style="margin:0">Plain‑English templates for support and reviews.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About 🙋🏽‍♀️</h2>
+      <p class="sub">I’m Monica Prasad, a Technical Support Engineer and creative builder. I guide teams through A2P and Toll‑Free approvals, write playbooks, and ship internal tools that cut review cycles. I also design modern websites for small businesses. My focus is clarity, usability, and results.</p>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="container">
+      <h2>Why Work With Me 💯</h2>
+      <ul class="sub" style="padding-left:18px">
+        <li>Clear communication — no jargon, direct guidance.</li>
+        <li>Fast turnarounds — realistic timelines, on‑time delivery.</li>
+        <li>Practical solutions — everything I ship is actionable.</li>
+        <li>Balanced skillset — compliance precision + design craft.</li>
       </ul>
     </div>
   </section>
 
-  <!-- Call to Action -->
   <section class="cta">
     <div class="container">
       <div class="cta-panel">
-        <h2>Let’s build something together</h2>
-        <p>Whether you need compliance clarity or a bold new website, I’m here to help you move forward.</p>
-        <a class="btn primary" href="mailto:m.pras@mail.com">Get in touch</a>
+        <h2>Let’s build something cool 😎</h2>
+        <p class="sub">Need compliance clarity or a new site? I’ve got you.</p>
+        <a class="btn" href="mailto:m.pras@mail.com">Get in touch →</a>
       </div>
     </div>
   </section>
 
-  <!-- Privacy Policy -->
   <section id="privacy">
     <div class="container">
-      <div class="section-head"><h2>Privacy Policy</h2></div>
-      <p class="sub">Your privacy is important. I only collect personal information you voluntarily share (such as through email). I do not sell or share your data. Third‑party services used on this site (like GitHub Pages hosting) may collect technical information such as IP addresses or browser type. If you contact me, your email will only be used to respond to your inquiry.</p>
+      <h2>Privacy 🔒</h2>
+      <p class="sub">I only collect info you share (like email). I don’t sell or share data. Hosts may log basic technical info. I’ll only use your email to reply.</p>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="container">© 2025 Monica — monica.af</div>
+  <div class="container">© <span id="y"></span> Monica Prasad — monica.af</div>
 </footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
